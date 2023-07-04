@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Works | K' Portfolio Website</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;500;600;700&family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../../css/style.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-88DPXFH7NF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-88DPXFH7NF');
+</script>
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar navbar-light navbar-static" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">K' Portfolio</a>
+        <div class="nav-menu-btn"><span></span><span></span><span></span></div>
+        <div class="navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="../../works/" class="nav-link">Works</a></li>
+            <li class="nav-item"><a href="../../about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="https://forms.gle/RPaVjRtBdgNAdFLQ8" class="nav-link" target="_blank">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- works single section -->
+  <section class="sec works-single-section pt-11">
+    <div class="container">
+      <div class="row">
+
+        <!-- main-block -->
+        <div class="col-md-8 ftco-animate">
+
+          <!-- works info -->
+          <div class="works-info ftco-animate">
+            <div class="works-publication-date"><i class="bi bi-calendar-date"></i> 2023/05/31</div>
+            <div class="works-category"><a href="../infra/"><i class="bi bi-folder2"></i> インフラ関連</a></div>
+          </div>
+
+          <!-- works title -->
+          <h2 class="works-ttl mb-0 ftco-animate">【AWS】 ミニマムなWEBサーバー構築</h2>
+
+          <!-- works main image -->
+          <div class="works-main-image ftco-animate">
+            <picture>
+              <source srcset="../../images/works/infra/01/main_infra_01.webp" type="image/webp" class="img-fluid ratio">
+              <img src="../../images/works/infra/01/main_infra_01.jpg" alt="【AWS】WEBサーバー構成図" width="730" height="672" class="img-fluid ratio" loading="lazy">
+            </picture>
+          </div>
+
+          <!-- works image gallery -->
+          <ul class="gallery-list">
+            <li class="ftco-animate">
+              <a href="../../images/works/infra/01/image_1.jpg" class="gallery" data-group="gallery">
+                <picture>
+                  <source srcset="../../images/works/infra/01/thumb_image_1.webp" type="image/webp" class="img-fluid ratio">
+                  <img src="../../images/works/infra/01/thumb_image_1.jpg" width="141" height="109" alt="【AWS】WEBサーバー構成図" class="img-fluid ratio" loading="lazy">
+                </picture>
+              </a>
+            </li>
+          </ul>
+
+          <!-- works summary -->
+          <dl class="summary-info ftco-animate">
+            <dt>使用ツール・技術</dt>
+            <dd>AWS (EC2 / VPC / Internet Gateway / サブネット / RDB) / Amazon Linux / Vim</dd>
+            
+            <dt>担当範囲</dt>
+            <dd>設計 / 公開<br>
+              ※個人製作のため全てを担当</dd>
+            
+            <dt>制作期間</dt>
+            <dd>1日</dd>
+          </dl>
+
+          <!-- works text -->
+          <p class="ftco-animate">
+            AWSの学習のアウトプットとして、なるべく実践的なシンプルでミニマムな構成のWEBサーバーを構築しました。<br>
+            本構築ではミニマムな構成を目的としているため、障害対策や冗長化、負荷分散等の点については対象外としています。
+          </p>
+
+          <p class="ftco-animate">
+            VPC内に、直接外のネットワークと繋がっている「public subnet」と
+            直接外のネットワークとは繋がっていない「private subnet」の
+            2種類のサブネットを作成しています。
+            2つに分けることで、WEBサーバーだけを「public subnet」に置き、
+            DBなど外に公開したくないものは「private subnet」に置くなど、
+            セキュリティ面を考慮したネットワーク構成としました。<br>
+            
+          </p>
+          
+          <!--
+          <div class="tag-widget post-tag-container mb-5 mt-5">
+            <div class="tag-list">
+              <a href="#">AWS</a>
+            </div>
+          </div>
+          -->
+        </div>
+
+        <!-- sidebar -->
+        <div class="col-md-4 sidebar ftco-animate">
+
+          <!-- works categories -->
+          <div class="sidebar-box ftco-animate">
+            <div class="categories">
+              <h3>カテゴリ</h3>
+              <ul class="px-0">
+                <li>
+                  <a href="../web/">WEBサイト<span>(1)</span></a>
+                </li>
+                <li>
+                  <a href="../webapp/">WEBアプリ<span>(1)</span></a>
+                </li>
+                <li>
+                  <a href="../infra/">インフラ関連<span>(1)</span></a>
+                </li>
+                <li>
+                  <a href="../other/">その他<span>(0)</span></a>
+                </li>              </ul>
+            </div>
+          </div>
+
+          <!--
+          <div class="sidebar-box ftco-animate">
+            <h3>タグ</h3>
+            <div class="tag-list">
+              <a href="#">HTML/CSS</a>
+              <a href="#">Bootstrap</a>
+              <a href="#">JavaScript</a>
+              <a href="#">jQuery</a>
+              <a href="#">Vue.js</a>
+              <a href="#">PHP</a>
+              <a href="#">Laravel</a>
+              <a href="#">MySQL</a>
+              <a href="#">Firebase</a>
+              <a href="#">AWS</a>
+              <a href="#">SPA</a>
+              <a href="#">Googleアナリティクス</a>
+              <a href="#">Googleフォーム</a>
+              <a href="#">GitHub</a>
+              <a href="#">Docker</a>
+              <a href="#">Node.js</a>
+              <a href="#">microCMS</a>
+              <a href="#">Tailwind CSS</a>
+              <a href="#">Nuxt.js</a>
+              <a href="#">SCSS</a>
+            </div>
+          </div>
+          -->
+
+          <!-- works new -->
+          <div class="sidebar-box ftco-animate">
+            <h3>最新の制作</h3>
+
+            <!-- works(portfolio site) -->
+            <div class="sidebar-work mb-4 d-flex">
+              <a href="../web/works_single_01.html" class="blog-img mr-4">
+                <picture>
+                  <source srcset="../../images/works/web/01/thumb_web_01_s.webp" type="image/webp" class="img-fluid ratio">
+                  <img src="../../images/works/web/01/thumb_web_01_s.jpg" alt="Bootstrapを活用したポートフォリオサイト" width="79" height="73" loading="lazy" class="img-fluid ratio">
+                </picture>
+              </a>
+              <div class="text">
+                <h4 class="heading">
+                  <a href="../web/works_single_01.html">Bootstrapを活用したポートフォリオサイト</a>
+                </h4>
+                <div class="meta">
+                  <div>
+                    <a href="../web/works_single_01.html"><i class="bi bi-calendar-date"></i> 2023/06/30</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- works(aws) -->
+            <div class="sidebar-work mb-4 d-flex">
+              <a href="../infra/works_single_01.html" class="blog-img mr-4">
+                <picture>
+                  <source srcset="../../images/works/infra/01/thumb_infra_01_s.webp" type="image/webp" class="img-fluid ratio">
+                  <img src="../../images/works/infra/01/thumb_infra_01_s.jpg" alt="【AWS】 ミニマムなWEBサーバー構築" width="79" height="73" loading="lazy" class="img-fluid ratio">
+                </picture>
+              </a>
+              <div class="text">
+                <h4 class="heading">
+                  <a href="../infra/works_single_01.html">【AWS】 ミニマムなWEBサーバー構築</a>
+                </h4>
+                <div class="meta">
+                  <div>
+                    <a href="../infra/works_single_01.html"><i class="bi bi-calendar-date"></i> 2023/05/31</a>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+            <!-- works(chat) -->
+            <div class="sidebar-work mb-4 d-flex">
+              <a href="../webapp/works_single_01.html" class="blog-img mr-4">
+                <picture>
+                  <source srcset="../../images/works/webapp/01/thumb_webapp_01_s.webp" type="image/webp" class="img-fluid ratio">
+                  <img src="../../images/works/webapp/01/thumb_webapp_01_s.jpg" alt="認証機能付きリアルタイムチャットアプリ" width="79" height="73" loading="lazy" class="img-fluid ratio">
+                </picture>
+              </a>
+              <div class="text">
+                <h4 class="heading">
+                  <a href="../webapp/works_single_01.html">認証機能付きリアルタイムチャットアプリ</a>
+                </h4>
+                <div class="meta">
+                  <div>
+                    <a href="../webapp/works_single_01.html"><i class="bi bi-calendar-date"></i> 2023/04/30</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; K'</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- page-top button -->
+  <p id="page-top"><a href="#"><i class="bi bi-chevron-double-up"></i></a></p>
+  
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle
+        class="path-bg"
+        cx="24"
+        cy="24"
+        r="22"
+        fill="none"
+        stroke-width="4"
+        stroke="#eeeeee"
+      />
+      <circle
+        class="path"
+        cx="24"
+        cy="24"
+        r="22"
+        fill="none"
+        stroke-width="4"
+        stroke-miterlimit="10"
+        stroke="#F96D00"
+      />
+    </svg>
+  </div>
+
+  <!-- script -->
+  <script src="../../js/jquery-3.6.4.min.js"></script>
+  <script src="../../js/jquery-migrate-3.4.0.min.js"></script>
+  <script src="../../js/bootstrap.min.js"></script>
+  <script src="../../js/jquery.easing.1.3.js"></script>
+  <script src="../../js/jquery.waypoints.min.js"></script>
+  <script src="../../js/jquery.stellar.min.js"></script>
+  <script src="../../js/aos.js"></script>
+  <script src="../../js/modaal.min.js"></script>
+  <script src="../../js/script.js"></script>
+</body>
+</html>
