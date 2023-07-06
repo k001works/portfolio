@@ -101,6 +101,7 @@
 	};
 	scrollWindow();
 
+	
 // waypoint
 	var contentWayPoint = function() {
 		var i = 0;
@@ -136,25 +137,6 @@
 
 
 	// navigation
-	var OnePageNav = function() {
-		$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
-		 	e.preventDefault();
-
-		 	var hash = this.hash,
-		 			navToggler = $('.navbar-toggler');
-		 	$('html, body').animate({
-		    scrollTop: $(hash).offset().top
-		  }, 700, 'easeInOutExpo', function(){
-		    window.location.hash = hash;
-		  });
-
-		  if ( navToggler.is(':visible') ) {
-		  	navToggler.click();
-		  }
-		});
-	};
-	OnePageNav();
-
 	$(".nav-menu-btn").click(function () {
 		$(this).toggleClass('active');
 		$("#ftco-nav").toggleClass('show');
@@ -179,24 +161,7 @@
 	});
 
 
-	// ページトップボタン
-	function PageTopAnimate() {
-		var scroll = $(window).scrollTop();
-		if (scroll >= 200) {
-			$('#page-top').removeClass('DownMove');
-			$('#page-top').addClass('UpMove');
-		} else {
-			if($('#page-top').hasClass('UpMove')) {
-				$('#page-top').removeClass('UpMove');
-				$('#page-top').addClass('DownMove');
-			}
-		}
-	}
-	
-	$(window).scroll(function() {
-		PageTopAnimate();
-	});
-
+	// page-top animate
 	$('#page-top a').click(function() {
 			$('body, html').animate({
 					scrollTop: 0
@@ -204,4 +169,49 @@
 			return false;
 	});
 
+
+	// txt-animate
+	function textAnimateControl() {
+		$('.txt-animate').each(function() {
+			var elemPos = $(this).offset().top - 50;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll >= elemPos - windowHeight) {
+				$(this).addClass("txt-show");
+	
+			} else {
+				$(this).removeClass("txt-show");
+			}
+		});
+	}
+	function textSplitSpan() {
+		var element = $(".txt-animate");
+		element.each(function () {
+			var text = $(this).text();
+			var wrapText = "";
+			text.split('').forEach(function (t, i) {
+				if (t !== " ") {
+					if (i < 2) {
+						wrapText += '<span class="l-text" style="animation-delay:.' + i + 's;">' + t + '</span>';
+					} else if (i < 10) {
+						wrapText += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+					} else {
+						var n = i / 10;
+						wrapText += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+					}
+	
+				} else {
+					wrapText += t;
+				}
+			});
+			$(this).html(wrapText);
+		});
+	}
+	textSplitSpan();
+	textAnimateControl();
+	
+	$(window).scroll(function () {
+		textAnimateControl();
+	});
+	
 })(jQuery);
